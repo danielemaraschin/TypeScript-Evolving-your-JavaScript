@@ -5,6 +5,6 @@ class Negociacao {
     #valor;
    
     constructor(data,quantidade, valor){
-        
+        this.#data = data;
     }
 }
