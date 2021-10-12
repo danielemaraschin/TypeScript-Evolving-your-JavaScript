@@ -10,20 +10,20 @@ export class Negociacao {
         this._valor = valor;
     }
 
-    get _data(){
-        return this.data;
+    get data(){
+        return this._data;
     }
 
-    get _quantidade(){
-        return this.quantidade;
+    get quantidade(){
+        return this._quantidade;
     }
 
-    get _valor(){
-        return this.valor;
+    get valor(){
+        return this._valor;
     }
 
     get volume(){
-        return this.quantidade * this.valor;
+        return this._quantidade * this._valor;
     }
 
 }
