@@ -11,8 +11,9 @@ export class NegociacaoController{
         this.inputValor = document.querySelector("#valor")
     }
         adiciona(){
+            const date = new Date(this.inputData.value.replace(/-/g, ", "));
             const negociacao = new Negociacao(
-                this.inputData.value, 
+                date,
                 this.inputQuantidade.value,
                 this.inputValor.value
             ); 
