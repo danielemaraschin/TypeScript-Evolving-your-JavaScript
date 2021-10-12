@@ -12,10 +12,12 @@ export class NegociacaoController{
     }
         adiciona(){
             const date = new Date(this.inputData.value.replace(/-/g, ", "));
+            const quantidade = parseInt(this.inputQuantidade.value)
+            const valor = parseFloat(this.inputValor.value);
             const negociacao = new Negociacao(
                 date,
-                this.inputQuantidade.value,
-                this.inputValor.value
+                quantidade,
+                valor
             ); 
             
             console.log(negociacao)
