@@ -1,5 +1,12 @@
-import { Negociacao } from "./models/negociacao.js";
+import { NegociacaoController } from "./controllers/negociacao-controller.js";
 
-const negociacao = new Negociacao(new Date(), 10, 100);
+const controller = new NegociacaoController();
+//quando submete apertando no botao, quer chamar o metodo adiciona da controller
+//o form tem uma classe chamada "form"
 
-
+const form = document.querySelector(".form")
+//form é um event
+form.addEventListener('submit', event =>{ //form é o event aqui
+    event.preventDefault();
+    controller.adiciona();
+});
