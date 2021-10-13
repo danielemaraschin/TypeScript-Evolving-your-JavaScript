@@ -10,7 +10,7 @@ export class NegociacaoController{
         this.inputQuantidade =document.querySelector("#quantidade");
         this.inputValor = document.querySelector("#valor")
     }
-    criaNegociacao(){
+    criaNegociacao() : Negociacao{
         const date = new Date(this.inputData.value.replace(/-/g, ", "));
         const quantidade = parseInt(this.inputQuantidade.value)
         const valor = parseFloat(this.inputValor.value);
