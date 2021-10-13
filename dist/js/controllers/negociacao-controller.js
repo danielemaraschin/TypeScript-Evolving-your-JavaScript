@@ -14,5 +14,19 @@ export class NegociacaoController {
     adiciona() {
         let negociacao = this.criaNegociacao();
         console.log(negociacao);
+        this.limparFormulario();
+        // document.querySelector(".form").addEventListener('submit', function (event){
+        // event.preventDefault();
+        // var tr = document.createElement("tr");
+        // var td = document.createElement("td");
+        // tr.appendChild(td)
+        // }) 
+    }
+    ;
+    limparFormulario() {
+        this.inputData.value = '';
+        this.inputQuantidade.value = '';
+        this.inputValor.value = '';
+        this.inputData.focus(); //dps de limpar todos os campos, coloca o foco no campo Data
     }
 }
