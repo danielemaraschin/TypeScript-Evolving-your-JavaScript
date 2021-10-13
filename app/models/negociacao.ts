@@ -18,7 +18,7 @@ export class Negociacao {
         return this._quantidade;
     }
 
-    get valor(){
+    get valor(): number {
         return this._valor;
     }
 
