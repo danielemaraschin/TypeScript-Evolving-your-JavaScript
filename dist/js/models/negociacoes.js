@@ -5,5 +5,6 @@ export class Negociacoes {
     }
     //tipo ARRAY que vvai receber dentro Negociacao
     adiciona(negociacao) {
+        this.negociacoes.push(negociacao); //recebe essa negociacao e faz um push na lista de negociacoes
     }
 }
