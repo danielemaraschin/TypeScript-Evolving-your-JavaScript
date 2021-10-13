@@ -17,7 +17,7 @@ export class NegociacaoController{
 
         return new Negociacao(date, quantidade,valor); 
     }
-    adiciona(){
+    adiciona(): void{
         let negociacao = this.criaNegociacao()
         console.log(negociacao)
     }
