@@ -10,7 +10,7 @@ export class Negociacao {
         this._valor = valor;
     }
 
-    get data(){
+    get data(): Date{
         return this._data;
     }
 
