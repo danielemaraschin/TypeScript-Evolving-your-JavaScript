@@ -5,7 +5,7 @@ export class NegociacaoController{
     private inputData: HTMLInputElement; //coloca que é um elemento do input HTML pq essas propriedades só são definidas no constructor
     private inputQuantidade: HTMLInputElement;
     private inputValor: HTMLInputElement;
-    private negociacoes: Negociacoes = new Negociacoes;
+    private negociacoes: Negociacoes = new Negociacoes; //pode remover a tipagem pq já está inicializando o atributo
 
     constructor(){
         this.inputData = document.querySelector("#data"); //input data tem id-data no index.html
@@ -21,8 +21,9 @@ export class NegociacaoController{
     }
     adiciona(): void{
         let negociacao = this.criaNegociacao()
-        console.log(negociacao)
-        this.limparFormulario()
+        this.negociacoes.adiciona(negociacao) //cria a negociacao e adiciona ela na lista negociacoes
+        console.log(this.negociacoes.lista())
+        this.limparFormulario();
     
         // document.querySelector(".form").addEventListener('submit', function (event){
             // event.preventDefault();
