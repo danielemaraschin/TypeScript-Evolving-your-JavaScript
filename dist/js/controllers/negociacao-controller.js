@@ -1,6 +1,8 @@
 import { Negociacao } from "../models/negociacao.js";
+import { Negociacoes } from "../models/negociacoes.js";
 export class NegociacaoController {
     constructor() {
+        this.negociacoes = new Negociacoes; //pode remover a tipagem pq já está inicializando o atributo
         this.inputData = document.querySelector("#data"); //input data tem id-data no index.html
         this.inputQuantidade = document.querySelector("#quantidade"); //definindo o que sao as prop da classe negociacaoController
         this.inputValor = document.querySelector("#valor");
@@ -13,7 +15,9 @@ export class NegociacaoController {
     }
     adiciona() {
         let negociacao = this.criaNegociacao();
-        console.log(negociacao);
+        this.negociacoes.adiciona(negociacao); //cria a negociacao e adiciona ela na lista negociacoes
+        this.negociacoes.lista().pop();
+        console.log(this.negociacoes.lista());
         this.limparFormulario();
         // document.querySelector(".form").addEventListener('submit', function (event){
         // event.preventDefault();
