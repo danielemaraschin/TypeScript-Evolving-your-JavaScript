@@ -10,8 +10,8 @@ export class Negociacoes {
         this.negociacoes.push(negociacao);//recebe essa negociacao e faz um push na lista de negociacoes
     }
 
-    lista(): Array<Negociacao> {
-        return [...this.negociacoes];
+    lista(): ReadonlyArray <Negociacao> {
+        return this.negociacoes;
     }
 }
 
