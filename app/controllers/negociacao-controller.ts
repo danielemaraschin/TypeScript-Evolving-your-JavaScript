@@ -22,8 +22,7 @@ export class NegociacaoController{
     adiciona(): void{
         let negociacao = this.criaNegociacao()
         this.negociacoes.adiciona(negociacao) //cria a negociacao e adiciona ela na lista negociacoes
-        
-        this.negociacoes.lista().pop();//apagar, era so um teste
+                
         console.log(this.negociacoes.lista());
         this.limparFormulario();
     
