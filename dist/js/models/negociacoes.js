@@ -8,7 +8,7 @@ export class Negociacoes {
         this.negociacoes.push(negociacao); //recebe essa negociacao e faz um push na lista de negociacoes
     }
     lista() {
-        return [...this.negociacoes];
+        return this.negociacoes;
     }
 }
 // document.querySelector('form').addEventListener('submit', (event) => {
