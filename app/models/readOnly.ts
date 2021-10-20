@@ -1,6 +1,6 @@
 export class Fatura {
     constructor(
-        private criadaEm: Date, 
+        private readonly criadaEm: Date, 
         private quantidade: number, 
         private valor: number
     ) {}
