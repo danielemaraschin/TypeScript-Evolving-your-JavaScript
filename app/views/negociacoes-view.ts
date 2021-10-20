@@ -1,1 +1,5 @@
-export class NegociacoesView{}
+export class NegociacoesView{
+    template(): string{
+        
+    }
+}
