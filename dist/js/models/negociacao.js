@@ -6,7 +6,8 @@ export class Negociacao {
     }
     get data() {
         return this._data;
-    }
+    } //como data eh um objeto e nao apenas um valor como 'quantidade'e 'valor', ela tem métodos que acabam podendo
+    //modifica-la mesmo que seja readonly entao nao adianta usar o readonly
     get volume() {
         return this.quantidade * this.valor;
     }
