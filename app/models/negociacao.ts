@@ -7,6 +7,7 @@ export class Negociacao {
     ) { }
 
     get data(): Date {
+        const data = new Date(this.data.getTime());
         return this._data;
     }//como data eh um objeto e nao apenas um valor como 'quantidade'e 'valor', ela tem métodos que acabam podendo
     //modifica-la mesmo que seja readonly entao nao adianta usar o readonly
