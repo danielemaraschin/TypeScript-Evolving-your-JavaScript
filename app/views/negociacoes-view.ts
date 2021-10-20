@@ -10,6 +10,8 @@ export class NegociacoesView{
                 </tr>
             
             
-            </thead>`
+            </thead>
+            <tbody></tbody>
+        <table>`
     }
 }
