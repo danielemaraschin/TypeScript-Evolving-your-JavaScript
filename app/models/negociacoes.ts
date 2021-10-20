@@ -4,7 +4,7 @@ import { Negociacao } from "../models/negociacao.js";
 
 export class Negociacoes {
     private negociacoes: Array<Negociacao> = [] //so a instancia de negociacoes que pode alterar o array negociacoes
-    //tipo ARRAY que vvai receber dentro Negociacao
+    //tipo ARRAY que vai receber dentro Negociacao
 
     adiciona(negociacao: Negociacao) { //o parametro negociacao vai ser do tipo : Negociacao
         this.negociacoes.push(negociacao);//recebe essa negociacao e faz um push na lista de negociacoes
