@@ -10,5 +10,3 @@ form.addEventListener('submit', event => {
     controller.adiciona();
 });
 const negociacoesView = new NegociacoesView;
-const template = negociacoesView.template();
-console.log(template);
