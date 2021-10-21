@@ -1,4 +1,5 @@
 import { NegociacaoController } from "./controllers/negociacao-controller.js";
+import { NegociacoesView } from "./views/negociacoes-view.js";
 
 const controller = new NegociacaoController();
 //quando submete apertando no botao, quer chamar o metodo adiciona da controller
@@ -11,3 +12,4 @@ form.addEventListener('submit', event =>{ //form é o event aqui
     controller.adiciona();
 });
 
+const negociacoesView = new NegociacoesView
