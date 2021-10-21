@@ -1,5 +1,5 @@
 export class NegociacoesView{
-    template(): string{ //retorna uma string HTML // primeiro retornsa a template string
+    template(): string{ //retorna uma string HTML // primeiro retorna a template string
         return`
         <table class="table table-hover table-bordered">
             <thead>
