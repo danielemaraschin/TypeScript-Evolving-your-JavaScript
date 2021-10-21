@@ -10,3 +10,4 @@ form.addEventListener('submit', event =>{ //form é o event aqui
     event.preventDefault();
     controller.adiciona();
 });
+
