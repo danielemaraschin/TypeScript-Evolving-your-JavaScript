@@ -2,7 +2,7 @@ export class NegociacoesView {
     constructor(seletor) {
         this.elemento = document.querySelector(seletor); //GUARDA O ELEM DO DOM AQUI, nao precisa chamar toda hora o template
     }
-    template() {
+    template(model) {
         return `
         <table class="table table-hover table-bordered">
             <thead>
@@ -18,6 +18,6 @@ export class NegociacoesView {
         <table>`;
     }
     update(model) {
-        this.elemento.innerHTML = this.template(); //transforma codigo HTML em elemento do DOM
+        this.elemento.innerHTML = this.template(model); //transforma codigo HTML em elemento do DOM
     }
 }
