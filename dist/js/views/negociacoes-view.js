@@ -1,6 +1,6 @@
 export class NegociacoesView {
     constructor(seletor) {
-        this.elemento = document.querySelector(seletor);
+        this.elemento = document.querySelector(seletor); //GUARDA O ELEM DO DOM AQUI, nao precisa chamar toda hora o template
     }
     template() {
         return `

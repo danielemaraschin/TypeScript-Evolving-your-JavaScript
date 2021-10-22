@@ -1,10 +1,11 @@
 export class NegociacoesView{
 
     private elemento : HTMLElement;
+
     constructor(seletor : string){
-        this.elemento = document.querySelector(seletor)
+        this.elemento = document.querySelector(seletor) //GUARDA O ELEM DO DOM AQUI, nao precisa chamar toda hora o template
     }
-    template(): string{ //retorna uma string HTML // primeiro retorna a template string
+    template(): string{ //retorna uma string HTML  - metodo template so serve para gerar template
         return`
         <table class="table table-hover table-bordered">
             <thead>
@@ -19,4 +20,7 @@ export class NegociacoesView{
             <tbody></tbody>
         <table>`
     }
+
+
+
 }
