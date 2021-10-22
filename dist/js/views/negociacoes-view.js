@@ -17,4 +17,7 @@ export class NegociacoesView {
             <tbody></tbody>
         <table>`;
     }
+    update() {
+        this.elemento.innerHTML = this.template(); //transforma codigo HTML em elemento do DOM
+    }
 }

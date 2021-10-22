@@ -20,7 +20,7 @@ export class NegociacoesView{
             <tbody></tbody>
         <table>`
     }
-
-
-
+    update(): void { //por esse metodo pedimos para a View fazer o seu proprio update 
+        this.elemento.innerHTML = this.template(); //transforma codigo HTML em elemento do DOM
+    }
 }
