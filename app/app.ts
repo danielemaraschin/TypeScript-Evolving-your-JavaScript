@@ -12,4 +12,4 @@ form.addEventListener('submit', event =>{ //form é o event aqui
     controller.adiciona();
 });
 
-const negociacoesView = new NegociacoesView
+const negociacoesView = new NegociacoesView("#negociacoesView")
