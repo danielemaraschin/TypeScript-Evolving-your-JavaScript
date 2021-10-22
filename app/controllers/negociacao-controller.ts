@@ -13,7 +13,7 @@ export class NegociacaoController{
         this.inputData = document.querySelector("#data"); //input data tem id-data no index.html
         this.inputQuantidade =document.querySelector("#quantidade");//definindo o que sao as prop da classe negociacaoController
         this.inputValor = document.querySelector("#valor");
-        this.negociacaoesView.update();
+        this.negociacaoesView.update(this.negociacoes);
     }
     criaNegociacao() : Negociacao{
         const date = new Date(this.inputData.value.replace(/-/g, ", "));
