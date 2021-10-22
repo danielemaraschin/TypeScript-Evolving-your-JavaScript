@@ -4,7 +4,7 @@ import { NegociacoesView } from "../views/negociacoes-view.js";
 export class NegociacaoController {
     constructor() {
         this.negociacoes = new Negociacoes; //pode remover a tipagem pq já está inicializando o atributo
-        this.negociacaoesView = new NegociacoesView("negociacoesView");
+        this.negociacaoesView = new NegociacoesView("#negociacoesView");
         this.inputData = document.querySelector("#data"); //input data tem id-data no index.html
         this.inputQuantidade = document.querySelector("#quantidade"); //definindo o que sao as prop da classe negociacaoController
         this.inputValor = document.querySelector("#valor");

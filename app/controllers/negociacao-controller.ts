@@ -7,7 +7,7 @@ export class NegociacaoController{
     private inputQuantidade: HTMLInputElement;
     private inputValor: HTMLInputElement;
     private negociacoes: Negociacoes = new Negociacoes; //pode remover a tipagem pq já está inicializando o atributo
-    private negociacaoesView  = new NegociacoesView("negociacoesView")
+    private negociacaoesView  = new NegociacoesView("#negociacoesView")
 
     constructor(){
         this.inputData = document.querySelector("#data"); //input data tem id-data no index.html
