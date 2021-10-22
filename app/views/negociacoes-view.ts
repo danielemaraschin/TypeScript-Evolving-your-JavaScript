@@ -1,4 +1,4 @@
-import { Negociacoes } from "../models/negociacoes";
+import { Negociacoes } from "../models/negociacoes.js";
 
 export class NegociacoesView{
 
@@ -7,7 +7,7 @@ export class NegociacoesView{
     constructor(seletor : string){
         this.elemento = document.querySelector(seletor) //GUARDA O ELEM DO DOM AQUI, nao precisa chamar toda hora o template
     }
-    template(): string{ //retorna uma string HTML  - metodo template so serve para gerar template
+    template(model: Negociacoes): string{ //retorna uma string HTML  - metodo template so serve para gerar template
         return`
         <table class="table table-hover table-bordered">
             <thead>
@@ -23,6 +23,6 @@ export class NegociacoesView{
         <table>`
     }
     update(model: Negociacoes): void { //por esse metodo pedimos para a View fazer o seu proprio update 
-        this.elemento.innerHTML = this.template(); //transforma codigo HTML em elemento do DOM
+        this.elemento.innerHTML = this.template(model); //transforma codigo HTML em elemento do DOM
     }
 }
