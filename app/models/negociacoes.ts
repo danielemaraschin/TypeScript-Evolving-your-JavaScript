@@ -15,6 +15,14 @@ export class Negociacoes {
     }
 }
 
+
+
+
+
+
+
+
+
 // document.querySelector('form').addEventListener('submit', (event) => {
     // var tr = document.createElement("tr");
 // 
