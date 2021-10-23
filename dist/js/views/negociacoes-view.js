@@ -11,8 +11,6 @@ export class NegociacoesView {
                     <th>QUANTIDADE</th>
                     <th>VALOR</th>
                 </tr>
-            
-            
             </thead>
             <tbody></tbody>
         <table>`;
