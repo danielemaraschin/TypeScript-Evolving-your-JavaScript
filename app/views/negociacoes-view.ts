@@ -1,3 +1,4 @@
+import { Negociacao } from "../models/negociacao.js";
 import { Negociacoes } from "../models/negociacoes.js";
 
 export class NegociacoesView{
@@ -17,7 +18,17 @@ export class NegociacoesView{
                     <th>VALOR</th>
                 </tr>
             </thead>
-            <tbody></tbody>
+            <tbody>
+                ${model.lista().map(negociacao => {
+                    return`
+                        <tr>
+                            <td>${negociacao.data}</td>
+                            <td>${negociacao.quantidade}</td>
+                            <td>${negociacao.valor}</td>
+                        </tr>
+                    `;
+                })}
+            </tbody>
         <table>`
     }
     update(model: Negociacoes): void { //por esse metodo pedimos para a View fazer o seu proprio update 
