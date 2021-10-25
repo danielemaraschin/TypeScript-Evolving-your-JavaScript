@@ -22,7 +22,7 @@ export class NegociacoesView{
                 ${model.lista().map(negociacao => {
                     return`
                         <tr>
-                            <td>${negociacao.data}</td>
+                            <td>${""} </td>
                             <td>${negociacao.quantidade}</td>
                             <td>${negociacao.valor}</td>
                         </tr>

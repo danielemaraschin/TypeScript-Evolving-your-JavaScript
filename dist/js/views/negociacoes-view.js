@@ -12,7 +12,17 @@ export class NegociacoesView {
                     <th>VALOR</th>
                 </tr>
             </thead>
-            <tbody></tbody>
+            <tbody>
+                ${model.lista().map(negociacao => {
+            return `
+                        <tr>
+                            <td>${""} </td>
+                            <td>${negociacao.quantidade}</td>
+                            <td>${negociacao.valor}</td>
+                        </tr>
+                    `;
+        })}
+            </tbody>
         <table>`;
     }
     update(model) {
