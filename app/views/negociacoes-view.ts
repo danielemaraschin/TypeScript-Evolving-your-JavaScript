@@ -22,7 +22,7 @@ export class NegociacoesView{
                 ${model.lista().map(negociacao => {
                     return`
                         <tr>
-                            <td>${""} </td>
+                            <td>${new Intl.DateTimeFormat().format(negociacao.data)} </td>
                             <td>${negociacao.quantidade}</td>
                             <td>${negociacao.valor}</td>
                         </tr>
@@ -38,3 +38,4 @@ export class NegociacoesView{
 }
 
 // fazemos lista().map  para q cada item da lista retorne a tr com suas td preenchidas com os dados em js ${}
+//mas para essa string nao ser um array, precisamos add o metodo .join() , sem nenhuma separação entre os itens do array (que deixarão de ser array)
