@@ -21,11 +21,13 @@ export class NegociacoesView {
                             <td>${negociacao.valor}</td>
                         </tr>
                     `;
-        })}
+        }).join('')}
             </tbody>
         <table>`;
     }
     update(model) {
         this.elemento.innerHTML = this.template(model); //transforma codigo HTML em elemento do DOM
+        //update e template recebem o mesmo parametro pq no final o template que vai passar os dados para elem do dom no final
     }
 }
+// fazemos lista().map  para q cada item da lista retorne a tr com suas td preenchidas com os dados em js ${}
