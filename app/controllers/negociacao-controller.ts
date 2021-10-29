@@ -1,5 +1,6 @@
 import { Negociacao } from "../models/negociacao.js";
 import { Negociacoes } from "../models/negociacoes.js";
+import { MensagemView } from "../views/mensagem-view.js";
 import { NegociacoesView } from "../views/negociacoes-view.js";
 
 export class NegociacaoController{
@@ -8,6 +9,7 @@ export class NegociacaoController{
     private inputValor: HTMLInputElement;
     private negociacoes: Negociacoes = new Negociacoes; //pode remover a tipagem pq já está inicializando o atributo
     private negociacaoesView  = new NegociacoesView("#negociacoesView")
+    private mensagemView = new MensagemView("#mensagemView")
 
     constructor(){
         this.inputData = document.querySelector("#data"); //input data tem id-data no index.html
