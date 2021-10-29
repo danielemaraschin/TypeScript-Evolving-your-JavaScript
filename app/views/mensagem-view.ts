@@ -9,6 +9,7 @@ export class MensagemView{
     }
 
     update(model: string): void {
-        const template = this.template
+        const template = this.template(model);
+        this.element.innerHTML = template
     }
 }
