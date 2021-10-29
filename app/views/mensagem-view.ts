@@ -4,7 +4,11 @@ export class MensagemView{
         this.element = document.querySelector(seletor);
     }
 
-    template(): string{
-        
+    template(model: string): string{
+
+    }
+
+    update(model: string): void {
+        const template = this.template
     }
 }
