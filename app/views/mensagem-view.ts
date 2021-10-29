@@ -3,4 +3,8 @@ export class MensagemView{
     constructor (seletor: string){
         this.element = document.querySelector(seletor);
     }
+
+    template(): string{
+        
+    }
 }
