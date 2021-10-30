@@ -1,13 +1,10 @@
 
 import { Negociacoes } from "../models/negociacoes.js";
+import { View } from "./view.js";
 
-export class NegociacoesView{
+export class NegociacoesView extends View{
 
-    private elemento : HTMLElement;
 
-    constructor(seletor : string){
-        this.elemento = document.querySelector(seletor) //GUARDA O ELEM DO DOM AQUI, nao precisa chamar toda hora o template
-    }
     template(model: Negociacoes): string{ //retorna uma string HTML  - metodo template so serve para gerar template
         return`
         <table class="table table-hover table-bordered">
