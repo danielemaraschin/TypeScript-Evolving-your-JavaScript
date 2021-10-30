@@ -2,7 +2,7 @@
 import { Negociacoes } from "../models/negociacoes.js";
 import { View } from "./view.js";
 
-export class NegociacoesView extends View{
+export class NegociacoesView extends View<Negociacoes>{
 
 
     template(model: Negociacoes): string{ //retorna uma string HTML  - metodo template so serve para gerar template
