@@ -28,10 +28,10 @@ export class NegociacoesView extends View{
             </tbody>
         <table>`
     }
-    update(model: Negociacoes): void { //por esse metodo pedimos para a View fazer o seu proprio update --
-        this.elemento.innerHTML = this.template(model); //transforma codigo HTML em elemento do DOM
-            //update e template recebem o mesmo parametro pq no final o template que vai passar os dados para elem do dom no final
-    }
+    // update(model: Negociacoes): void { //por esse metodo pedimos para a View fazer o seu proprio update --
+    //     this.elemento.innerHTML = this.template(model); //transforma codigo HTML em elemento do DOM
+    //         //update e template recebem o mesmo parametro pq no final o template que vai passar os dados para elem do dom no final
+    //}
 }
 
 // fazemos lista().map  para q cada item da lista retorne a tr com suas td preenchidas com os dados em js ${}
