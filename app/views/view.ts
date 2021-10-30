@@ -4,10 +4,11 @@ export  class View{
     constructor(seletor: string){
         this.elemento = document.querySelector(seletor)
     }
-    template(model: string){
-        throw new Error("Template has to be implemented.")
+    template(model: string) : string{
+        throw new Error("Template has to be implemented.");
     }
-    // update(): void{
-    //     this.elemento.innerHTML = this.template(model)
-    // }
+    update(model:string): void{
+        const template = this.template(model)
+        this.elemento.innerHTML = template;
+    }
 }
