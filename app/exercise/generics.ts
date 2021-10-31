@@ -1,22 +1,22 @@
-class GenericDAO {
+class GenericDAO<T, K> {
 
-    adiciona(objeto: Negociacao): number {
+    adiciona(objeto: T, K): number {
         /* implementação do método omitida */
     }
 
-    apaga(objeto: Negociacao): void {
+    apaga(objeto: T): void {
         /* implementação do método omitida */
     }
 
-    buscaPorId(id: number): Negociacao {
+    buscaPorId(id: K): Negociacao {
         /* implementação do método omitida */
     }
 
-    atualiza(objeto: Negociacao): void {
+    atualiza(objeto: T): void {
         /* implementação do método omitida */
     }
 
-    listaTodos(): Negociacao[] {
+    listaTodos(): T[] {
         /* implementação do método omitida */
     }
 }
