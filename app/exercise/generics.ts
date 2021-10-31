@@ -1,6 +1,10 @@
+import { Negociacao } from "../models/negociacao";
+
+//exercicio
+
 class GenericDAO<T, K> {
 
-    adiciona(objeto: T, K): number {
+    adiciona(objeto: T): K {
         /* implementação do método omitida */
     }
 
@@ -8,7 +12,7 @@ class GenericDAO<T, K> {
         /* implementação do método omitida */
     }
 
-    buscaPorId(id: K): Negociacao {
+    buscaPorId(id: K): T {
         /* implementação do método omitida */
     }
 
@@ -23,10 +27,10 @@ class GenericDAO<T, K> {
 
 // exemplo de uso
 
-let dao = new GenericDao();
+let dao = new GenericDAO();
 let negociacao = new Negociacao(new Date(), 1, 200);
 
 // recebe o ID da negociação gerada
 
 let id = dao.adiciona(negociacao);
-let negociacaoBuscada = dao.buscaPorId(id);
+let buscaNegociacao = dao.buscaPorId(id);
