@@ -31,6 +31,6 @@ let dao = new GenericDAO();
 let negociacao = new Negociacao(new Date(), 1, 200);
 
 // recebe o ID da negociação gerada
-
+// T é um type e k é outro.. nesse caso T é negociacao e K numero ou string
 let id = dao.adiciona(negociacao);
 let buscaNegociacao = dao.buscaPorId(id);

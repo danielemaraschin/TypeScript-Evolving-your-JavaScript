@@ -7,7 +7,7 @@ export  class View<T>{
     template(model: T) : string{
         throw new Error("Template has to be implemented.");
     }
-    update(model:T): void{
+    update(model: T): void{
         const template = this.template(model)
         this.elemento.innerHTML = template;
     }
