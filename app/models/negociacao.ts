@@ -7,7 +7,7 @@ export class Negociacao {
     ) { }
 
     get data(): Date {
-        const data = new Date(this.data.getTime());
+        const data = new Date(this._data.getTime());
         return data;
     }
     //como data eh um objeto e nao apenas um valor como 'quantidade'e 'valor', ela tem métodos que acabam podendo
