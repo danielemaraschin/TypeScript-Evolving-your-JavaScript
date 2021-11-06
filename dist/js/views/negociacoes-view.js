@@ -25,6 +25,9 @@ export class NegociacoesView extends View {
             </tbody>
         <table>`;
     }
+    formatar(data) {
+        return new Intl.DateTimeFormat().format(data);
+    }
 }
 //o código update foi apagado pq ele está sendo herdado da classe pai, mas vou deixar o codigo aqui caso precise consultar dps
 // update(model: Negociacoes): void { //por esse metodo pedimos para a View fazer o seu proprio update --

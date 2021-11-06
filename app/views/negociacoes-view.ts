@@ -5,8 +5,8 @@ import { View } from "./view.js";
 export class NegociacoesView extends View<Negociacoes>{
 
 
-    template(model: Negociacoes): string{ //retorna uma string HTML  - metodo template so serve para gerar template
-        return`
+    template(model: Negociacoes): string { //retorna uma string HTML  - metodo template so serve para gerar template
+        return `
         <table class="table table-hover table-bordered">
             <thead>
                 <tr>
@@ -17,20 +17,29 @@ export class NegociacoesView extends View<Negociacoes>{
             </thead>
             <tbody>
                 ${model.lista().map(negociacao => {
-                    return`
+            return `
                         <tr>
                             <td>${new Intl.DateTimeFormat().
-                                format(negociacao.data)}
+                    format(negociacao.data)}
                             </td>
                             <td>${negociacao.quantidade}</td>
                             <td>${negociacao.valor}</td>
                         </tr>
                     `;
-                }).join('')}
+        }).join('')}
             </tbody>
         <table>`
     }
+    public formatar(data: Date): string {
+        return new Intl.DateTimeFormat().format(data);
+
+    }
+
 }
+
+
+
+
 
 
 //o código update foi apagado pq ele está sendo herdado da classe pai, mas vou deixar o codigo aqui caso precise consultar dps
