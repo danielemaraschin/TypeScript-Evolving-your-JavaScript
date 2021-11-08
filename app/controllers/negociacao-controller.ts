@@ -15,7 +15,7 @@ export class NegociacaoController{
         this.inputData = document.querySelector("#data"); //input data tem id-data no index.html
         this.inputQuantidade =document.querySelector("#quantidade");//definindo o que sao as prop da classe negociacaoController
         this.inputValor = document.querySelector("#valor");
-        this.negociacaoesView.update(this.negociacoes); //td vez q o controller é chamado, ele garante que vai renderizar a pagina
+        this.atualizaView(); //td vez q o controller é chamado, ele garante que vai renderizar a pagina
     }
     criaNegociacao() : Negociacao{
         const date = new Date(this.inputData.value.replace(/-/g, ", "));
@@ -28,7 +28,7 @@ export class NegociacaoController{
         const negociacao = this.criaNegociacao()
         this.negociacoes.adiciona(negociacao) //cria a negociacao e adiciona ela na lista negociacoes
         this.negociacaoesView.update(this.negociacoes)
-        this.mensagemView.update('Negotiation has been added successfully')
+        this.atualizaView();
         this.limparFormulario();
 
      };
@@ -40,7 +40,9 @@ export class NegociacaoController{
         this.inputData.focus(); //dps de limpar todos os campos, coloca o foco no campo Data
     }
 
-    // private atualizaView(): void{
-        // 
-    // }
+    private atualizaView(): void{
+        this.negociacaoesView.update(this.negociacoes); 
+        this.mensagemView.update('Negotiation has been added successfully')
+        
+    }
 }
