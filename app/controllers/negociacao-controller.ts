@@ -28,9 +28,10 @@ export class NegociacaoController{
         const negociacao = this.criaNegociacao()
         if(negociacao.data.getDay()>0 && negociacao.data.getDay()<6){
             this.negociacoes.adiciona(negociacao) //cria a negociacao e adiciona ela na lista negociacoes
-            this.negociacaoesView.update(this.negociacoes)
             this.atualizaView();
             this.limparFormulario();
+        }else{
+            this.mensagemView.update('Please, fill the form with a workday.');
         }
      };
     
