@@ -19,17 +19,11 @@ export class NegociacaoController {
         return new Negociacao(date, quantidade, valor);
     }
     adiciona() {
-        let negociacao = this.criaNegociacao();
+        const negociacao = this.criaNegociacao();
         this.negociacoes.adiciona(negociacao); //cria a negociacao e adiciona ela na lista negociacoes
         this.negociacaoesView.update(this.negociacoes);
         this.mensagemView.update('Negotiation has been added successfully');
         this.limparFormulario();
-        // document.querySelector(".form").addEventListener('submit', function (event){
-        // event.preventDefault();
-        // var tr = document.createElement("tr");
-        // var td = document.createElement("td");
-        // tr.appendChild(td)
-        // }) 
     }
     ;
     limparFormulario() {

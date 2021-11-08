@@ -28,6 +28,7 @@ export class NegociacoesView extends View<Negociacoes>{
             </tbody>
         <table>`
     }
+    
     private formatar(data: Date): string {
         return new Intl.DateTimeFormat().format(data);
     }
