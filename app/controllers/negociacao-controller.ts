@@ -24,7 +24,7 @@ export class NegociacaoController{
 
         return new Negociacao(date, quantidade,valor); 
     }
-    adiciona(): void{
+    public adiciona(): void{
         const negociacao = this.criaNegociacao()
         this.negociacoes.adiciona(negociacao) //cria a negociacao e adiciona ela na lista negociacoes
         this.negociacaoesView.update(this.negociacoes)
