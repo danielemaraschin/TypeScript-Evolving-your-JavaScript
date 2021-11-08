@@ -19,7 +19,7 @@ export class NegociacoesView extends View<Negociacoes>{
                 ${model.lista().map(negociacao => {
             return `
                         <tr>
-                            <td>${this.formatar(negociacao.data)}</td>
+                            <td>${this.formatarData(negociacao.data)}</td>
                             <td>${negociacao.quantidade}</td>
                             <td>${negociacao.valor}</td>
                         </tr>
@@ -28,8 +28,8 @@ export class NegociacoesView extends View<Negociacoes>{
             </tbody>
         <table>`
     }
-    
-    private formatar(data: Date): string {
+
+    private formatarData(data: Date): string {
         return new Intl.DateTimeFormat().format(data);
     }
 //private method so pode ser acessado pela propria classe, nem as classes filhas podem acessar
