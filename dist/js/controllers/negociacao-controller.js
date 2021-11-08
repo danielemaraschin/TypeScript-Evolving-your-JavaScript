@@ -20,10 +20,12 @@ export class NegociacaoController {
     }
     adiciona() {
         const negociacao = this.criaNegociacao();
-        this.negociacoes.adiciona(negociacao); //cria a negociacao e adiciona ela na lista negociacoes
-        this.negociacaoesView.update(this.negociacoes);
-        this.atualizaView();
-        this.limparFormulario();
+        if (negociacao.data.getDay() > 0 && negociacao.data.getDay() < 6) {
+            this.negociacoes.adiciona(negociacao); //cria a negociacao e adiciona ela na lista negociacoes
+            this.negociacaoesView.update(this.negociacoes);
+            this.atualizaView();
+            this.limparFormulario();
+        }
     }
     ;
     limparFormulario() {
