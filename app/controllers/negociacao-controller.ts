@@ -17,7 +17,7 @@ export class NegociacaoController{
         this.inputValor = document.querySelector("#valor");
         this.atualizaView(); //td vez q o controller é chamado, ele garante que vai renderizar a pagina
     }
-    criaNegociacao() : Negociacao{
+    private criaNegociacao() : Negociacao{
         const date = new Date(this.inputData.value.replace(/-/g, ", "));
         const quantidade = parseInt(this.inputQuantidade.value)
         const valor = parseFloat(this.inputValor.value);
