@@ -31,7 +31,7 @@ export class NegociacoesView extends View<Negociacoes>{
     private formatar(data: Date): string {
         return new Intl.DateTimeFormat().format(data);
     }
-
+//private method so pode ser acessado pela propria classe, nem as classes filhas podem acessar
 }
 
 
