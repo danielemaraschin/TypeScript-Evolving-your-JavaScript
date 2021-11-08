@@ -33,7 +33,7 @@ export class NegociacaoController{
 
      };
     
-    limparFormulario(): void {
+    private limparFormulario(): void {
         this.inputData.value = '';
         this.inputQuantidade.value = '';
         this.inputValor.value = '';
