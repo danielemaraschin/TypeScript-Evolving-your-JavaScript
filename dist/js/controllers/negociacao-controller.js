@@ -7,6 +7,8 @@ export class NegociacaoController {
         this.negociacoes = new Negociacoes; //pode remover a tipagem pq já está inicializando o atributo
         this.negociacaoesView = new NegociacoesView("#negociacoesView");
         this.mensagemView = new MensagemView("#mensagemView");
+        this.SABADO = 6; //var em letra maiucula no ts
+        this.DOMINGO = 0;
         this.inputData = document.querySelector("#data"); //input data tem id-data no index.html
         this.inputQuantidade = document.querySelector("#quantidade"); //definindo o que sao as prop da classe negociacaoController
         this.inputValor = document.querySelector("#valor");
@@ -30,7 +32,7 @@ export class NegociacaoController {
         }
     }
     workDay(data) {
-        return data.getDay() > 0 && data.getDay() < 6;
+        return data.getDay() > this.DOMINGO && data.getDay() < this.SABADO;
     }
     limparFormulario() {
         this.inputData.value = '';

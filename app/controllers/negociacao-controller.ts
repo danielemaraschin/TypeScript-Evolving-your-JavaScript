@@ -11,7 +11,8 @@ export class NegociacaoController{
     private negociacaoesView  = new NegociacoesView("#negociacoesView")
     private mensagemView = new MensagemView("#mensagemView")
     private SABADO = 6; //var em letra maiucula no ts
-    
+    private DOMINGO = 0;
+
 
     constructor(){
         this.inputData = document.querySelector("#data"); //input data tem id-data no index.html
@@ -38,7 +39,7 @@ export class NegociacaoController{
     }
 
     private workDay(data: Date){
-        return data.getDay()>0 && data.getDay()<6
+        return data.getDay()>this.DOMINGO && data.getDay()<this.SABADO
     }
     
     private limparFormulario(): void {
