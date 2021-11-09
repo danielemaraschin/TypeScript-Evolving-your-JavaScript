@@ -20,16 +20,18 @@ export class NegociacaoController {
     }
     adiciona() {
         const negociacao = this.criaNegociacao();
-        if (negociacao.data.getDay() > 0 && negociacao.data.getDay() < 6) {
+        if (!this.workDay(negociacao.data)) {
+            this.mensagemView.update('Please, fill the form with a workday.');
+        }
+        else {
             this.negociacoes.adiciona(negociacao); //cria a negociacao e adiciona ela na lista negociacoes
             this.atualizaView();
             this.limparFormulario();
         }
-        else {
-            this.mensagemView.update('Please, fill the form with a workday.');
-        }
     }
-    ;
+    workDay(data) {
+        return data.getDay() > 0 && data.getDay() < 6;
+    }
     limparFormulario() {
         this.inputData.value = '';
         this.inputQuantidade.value = '';
