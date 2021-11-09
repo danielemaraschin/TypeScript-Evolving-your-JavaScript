@@ -36,7 +36,7 @@ export class NegociacaoController{
     }
 
     private workDay(data: Date){
-        return data.getDay()>0 && negociacao.data.getDay()<6
+        return data.getDay()>0 && data.getDay()<6
     }
     
     private limparFormulario(): void {
