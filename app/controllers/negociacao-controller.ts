@@ -10,6 +10,8 @@ export class NegociacaoController{
     private negociacoes: Negociacoes = new Negociacoes; //pode remover a tipagem pq já está inicializando o atributo
     private negociacaoesView  = new NegociacoesView("#negociacoesView")
     private mensagemView = new MensagemView("#mensagemView")
+    private SABADO = 6; //var em letra maiucula no ts
+    
 
     constructor(){
         this.inputData = document.querySelector("#data"); //input data tem id-data no index.html
