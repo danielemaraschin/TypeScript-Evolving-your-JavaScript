@@ -10,7 +10,7 @@ export class NegociacaoController{
     private negociacoes: Negociacoes = new Negociacoes; //pode remover a tipagem pq já está inicializando o atributo
     private negociacaoesView  = new NegociacoesView("#negociacoesView")
     private mensagemView = new MensagemView("#mensagemView")
-    private SABADO = 6; //var em letra maiucula no ts
+    private readonly SABADO = 6; //var em letra maiucula no ts
     private DOMINGO = 0;
 
 
