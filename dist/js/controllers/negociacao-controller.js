@@ -8,7 +8,7 @@ export class NegociacaoController {
         this.negociacaoesView = new NegociacoesView("#negociacoesView");
         this.mensagemView = new MensagemView("#mensagemView");
         this.SABADO = 6; //var em letra maiucula no ts
-        this.DOMINGO = 0;
+        this.DOMINGO = 0; //readOnly pq esses valores sao fixos e nao podem ter outro valor atribuido
         this.inputData = document.querySelector("#data"); //input data tem id-data no index.html
         this.inputQuantidade = document.querySelector("#quantidade"); //definindo o que sao as prop da classe negociacaoController
         this.inputValor = document.querySelector("#valor");
