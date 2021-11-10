@@ -1,4 +1,4 @@
-export enum DiaDaSemana {
+export enum DiaDaSemana { //ENUM É SOMENTE LEITURA, POR PADRÃO E O PRIMEIRO ITEM É SEMPRE 0 (NO CASO DOMINGO)
     DOMINGO,
     SEGUNDA,
     TERCA,
