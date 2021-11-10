@@ -11,7 +11,7 @@ export class NegociacaoController{
     private negociacaoesView  = new NegociacoesView("#negociacoesView")
     private mensagemView = new MensagemView("#mensagemView")
     private readonly SABADO = 6; //var em letra maiucula no ts
-    private readonly DOMINGO = 0;
+    private readonly DOMINGO = 0; //readOnly pq esses valores sao fixos e nao podem ter outro valor atribuido
 
 
     constructor(){
