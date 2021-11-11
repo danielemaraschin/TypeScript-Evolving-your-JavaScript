@@ -8,3 +8,4 @@ export var DiaDaSemana;
     DiaDaSemana[DiaDaSemana["SEXTA"] = 5] = "SEXTA";
     DiaDaSemana[DiaDaSemana["SABADO"] = 6] = "SABADO";
 })(DiaDaSemana || (DiaDaSemana = {}));
+//PARA NAO CORRER O RISCO DE SE PERDER NOS NUMEROS, VAMOS JÁ ATRIBUIR OS VALORES PRAS VAR, MAS NAO PRECISA
