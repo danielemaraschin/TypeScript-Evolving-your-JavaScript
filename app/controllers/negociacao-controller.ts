@@ -40,7 +40,7 @@ export class NegociacaoController{
     }
 
     private workDay(data: Date){
-        return data.getDay()>this.DOMINGO && data.getDay()<this.SABADO
+        return data.getDay()> DiaDaSemana.DOMINGO && data.getDay()<DiaDaSemana.SABADO
     }
     
     private limparFormulario(): void {

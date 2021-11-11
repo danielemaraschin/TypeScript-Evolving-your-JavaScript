@@ -2,6 +2,7 @@ import { Negociacao } from "../models/negociacao.js";
 import { Negociacoes } from "../models/negociacoes.js";
 import { MensagemView } from "../views/mensagem-view.js";
 import { NegociacoesView } from "../views/negociacoes-view.js";
+import { DiaDaSemana } from "../enums/dias-da-semana.js";
 export class NegociacaoController {
     constructor() {
         this.negociacoes = new Negociacoes; //pode remover a tipagem pq já está inicializando o atributo
@@ -32,7 +33,7 @@ export class NegociacaoController {
         }
     }
     workDay(data) {
-        return data.getDay() > this.DOMINGO && data.getDay() < this.SABADO;
+        return data.getDay() > DiaDaSemana.DOMINGO && data.getDay() < DiaDaSemana.SABADO;
     }
     limparFormulario() {
         this.inputData.value = '';
