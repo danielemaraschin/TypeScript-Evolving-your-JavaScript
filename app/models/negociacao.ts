@@ -14,7 +14,7 @@ export class Negociacao {
     //modifica-la mesmo que seja readonly entao nao adianta usar o readonly
 
 
-    public criaDe(dataString: string, quantidadeString: string, valorString: string) {
+    public criaDe(dataString: string, quantidadeString: string, valorString: string): Negociacao {
         const date = new Date(dataString.replace(/-/g, ", "));
         const quantidade = parseInt(quantidadeString)
         const valor = parseFloat(valorString);
