@@ -12,8 +12,6 @@ export class NegociacaoController{
     private negociacaoesView  = new NegociacoesView("#negociacoesView")
     private mensagemView = new MensagemView("#mensagemView")
 
-
-
     constructor(){
         this.inputData = document.querySelector("#data"); //input data tem id-data no index.html
         this.inputQuantidade =document.querySelector("#quantidade");//definindo o que sao as prop da classe negociacaoController
