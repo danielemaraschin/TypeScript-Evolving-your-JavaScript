@@ -14,8 +14,8 @@ export class Negociacao {
     //modifica-la mesmo que seja readonly entao nao adianta usar o readonly
 
 
-    public criaDe(data: string, quantidade: string, valor:string){
-        
+    public criaDe(dateString: string, quantidadeString: string, valorString:string){
+
     }
 
     get volume(): number {
