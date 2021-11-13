@@ -14,8 +14,7 @@ export class NegociacaoController {
         this.atualizaView(); //td vez q o controller é chamado, ele garante que vai renderizar a pagina
     }
     adiciona() {
-        const negociacaoTest = new Negociacao(null, 0, 0);
-        const negociacao = negociacaoTest.criaDe(this.inputData.value, this.inputQuantidade.value, this.inputValor.value);
+        const negociacao = new Negociacao(null, 0, 0).criaDe(this.inputData.value, this.inputQuantidade.value, this.inputValor.value);
         if (!this.workDay(negociacao.data)) {
             this.mensagemView.update('Please, fill the form with a workday.');
         }
