@@ -13,14 +13,9 @@ export class NegociacaoController {
         this.inputValor = document.querySelector("#valor");
         this.atualizaView(); //td vez q o controller é chamado, ele garante que vai renderizar a pagina
     }
-    criaNegociacao() {
-        const date = new Date(this.inputData.value.replace(/-/g, ", "));
-        const quantidade = parseInt(this.inputQuantidade.value);
-        const valor = parseFloat(this.inputValor.value);
-        return new Negociacao(date, quantidade, valor);
-    }
     adiciona() {
-        const negociacao = this.criaNegociacao();
+        const negociacaoTest = new Negociacao(null, 0, 0);
+        const negociacao = negociacaoTest.criaDe(this.inputData.value, this.inputQuantidade.value, this.inputValor.value);
         if (!this.workDay(negociacao.data)) {
             this.mensagemView.update('Please, fill the form with a workday.');
         }
