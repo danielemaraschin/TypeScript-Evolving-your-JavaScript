@@ -21,7 +21,7 @@ export class NegociacaoController{
 
     public adiciona(): void{
         
-        const negociacao = new Negociacao(null,0,0).criaDe(
+        const negociacao = new Negociacao(null, 0,0).criaDe(
             this.inputData.value, this.inputQuantidade.value, this.inputValor.value
         )
         if(!this.workDay(negociacao.data)){
