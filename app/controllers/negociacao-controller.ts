@@ -22,7 +22,9 @@ export class NegociacaoController{
     public adiciona(): void{
         
         const negociacao = Negociacao.criaDe(
-            this.inputData.value, this.inputQuantidade.value, this.inputValor.value
+            this.inputData.value, 
+            this.inputQuantidade.value, 
+            this.inputValor.value
         )
         if(!this.workDay(negociacao.data)){
             this.mensagemView.update('Please, fill the form with a workday.');
