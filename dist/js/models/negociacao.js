@@ -10,7 +10,7 @@ export class Negociacao {
     }
     //como data eh um objeto e nao apenas um valor como 'quantidade'e 'valor', ela tem métodos que acabam podendo
     //modifica-la mesmo que seja readonly entao nao adianta usar o readonly
-    criaDe(dataString, quantidadeString, valorString) {
+    static criaDe(dataString, quantidadeString, valorString) {
         const date = new Date(dataString.replace(/-/g, ", "));
         const quantidade = parseInt(quantidadeString);
         const valor = parseFloat(valorString);
