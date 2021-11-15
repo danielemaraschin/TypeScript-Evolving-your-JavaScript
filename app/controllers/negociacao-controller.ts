@@ -21,7 +21,7 @@ export class NegociacaoController{
 
     public adiciona(): void{
         
-        const negociacao = Negociacao.criaDe(
+        const negociacao = Negociacao.criaDe( // não precisa dar new para chamar criaDe pq é um método statico
             this.inputData.value, 
             this.inputQuantidade.value, 
             this.inputValor.value

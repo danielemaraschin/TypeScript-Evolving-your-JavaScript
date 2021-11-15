@@ -14,7 +14,7 @@ export class Negociacao {
     //modifica-la mesmo que seja readonly entao nao adianta usar o readonly
 
 
-    public static criaDe(dataString: string,
+    public static criaDe(dataString: string, //static method is always public - não precisa instanciar a classe para chamar um metodo static
         quantidadeString: string, 
         valorString: string): Negociacao {
             const date = new Date(dataString.replace(/-/g, ", "));
