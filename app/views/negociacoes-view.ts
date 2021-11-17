@@ -23,6 +23,7 @@ export class NegociacoesView extends View<Negociacoes>{
                             <td>${negociacao.quantidade}</td>
                             <td>${negociacao.valor}</td>
                         </tr>
+                        <script>alert('isso não deve aparecer no navegador')</script>
                     `;
         }).join('')}
             </tbody>
