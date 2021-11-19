@@ -14,7 +14,10 @@ export abstract class View<T>{
     
 
     public update(model: T): void{
-        let template = this.template(model)
+        let template = this.template(model);
+        if(this.escapar){ //if scape is true
+            template = template.replace(/<script>[\s/S/]*?<\/script>/, "");
+        }
         this.elemento.innerHTML = template;
     }
 }
