@@ -4,7 +4,7 @@ export abstract class View<T>{
     private escape: boolean = false; //nao precisa colocar boolean pq como estamos atribuindo o valor, o ts já insere o boolean
     //private escape = false; o codigo acima pode ser assim tb que o resultado eh o mesmo 
 
-    constructor(seletor: string, escape: boolean){
+    constructor(seletor: string, escape?: boolean){
         this.elemento = document.querySelector(seletor)
     }
 
