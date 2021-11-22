@@ -9,7 +9,7 @@ export class NegociacaoController{
     private inputQuantidade: HTMLInputElement;
     private inputValor: HTMLInputElement;
     private negociacoes: Negociacoes = new Negociacoes; //pode remover a tipagem pq já está inicializando o atributo
-    private negociacaoesView  = new NegociacoesView("#negociacoesView")
+    private negociacaoesView  = new NegociacoesView("#negociacoesView", true)
     private mensagemView = new MensagemView("#mensagemView")
 
     constructor(){
