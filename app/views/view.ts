@@ -5,7 +5,10 @@ export abstract class View<T>{
     //private escape = false; o codigo acima pode ser assim tb que o resultado eh o mesmo 
 
     constructor(seletor: string, escape?: boolean){
-        this.elemento = document.querySelector(seletor)
+        this.elemento = document.querySelector(seletor);
+        if(escape){// if escapar é verdadeiro (so colocar escape dentro dos parenteses ja está dizendo que eh true)
+            this.escape = escape;
+        }
     }
 
     protected abstract template(model: T) : string
