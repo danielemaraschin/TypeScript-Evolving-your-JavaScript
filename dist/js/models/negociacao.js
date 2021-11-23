@@ -8,10 +8,7 @@ export class Negociacao {
         const data = new Date(this._data.getTime());
         return data;
     }
-    //como data eh um objeto e nao apenas um valor como 'quantidade'e 'valor', ela tem métodos que acabam podendo
-    //modifica-la mesmo que seja readonly entao nao adianta usar o readonly
-    static criaDe(dataString, //static method is always public - não precisa instanciar a classe para chamar um metodo static
-    quantidadeString, valorString) {
+    static criaDe(dataString, quantidadeString, valorString) {
         const date = new Date(dataString.replace(/-/g, ", "));
         const quantidade = parseInt(quantidadeString);
         const valor = parseFloat(valorString);
