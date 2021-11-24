@@ -7,9 +7,12 @@ const controller = new NegociacaoController();
 
 const form = document.querySelector(".form")
 //form é um event
-form.addEventListener('submit', event =>{ //form é o event aqui
-    event.preventDefault();
-    controller.adiciona();
-});
-
+if(form){
+    form.addEventListener('submit', event =>{ //form é o event aqui
+        event.preventDefault();
+        controller.adiciona();
+    });
+}else{
+    throw Error('Não foi possível inicializar a app. Verifique se o form existe.')
+}
 const negociacoesView = new NegociacoesView("#negociacoesView")
