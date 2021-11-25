@@ -14,7 +14,7 @@ export class NegociacaoController{
 
     constructor(){
         this.inputData = document.querySelector("#data") as HTMLInputElement; //input data tem id-data no index.html
-        this.inputQuantidade =document.querySelector("#quantidade") as HTMLInputElement;//definindo o que sao as prop da classe negociacaoController
+        this.inputQuantidade = <HTMLInputElement>document.querySelector("#quantidade") ;//definindo o que sao as prop da classe negociacaoController
         this.inputValor = <HTMLInputElement>document.querySelector("#valor");
         this.atualizaView(); //td vez q o controller é chamado, ele garante que vai renderizar a pagina
     }
