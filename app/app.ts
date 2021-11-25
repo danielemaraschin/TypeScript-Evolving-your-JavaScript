@@ -6,8 +6,8 @@ const controller = new NegociacaoController();
 //o form tem uma classe chamada "form"
 
 const form = document.querySelector(".form")
-//form é um event
-if(form){
+
+if(form){ //if só será executado se tiver algum valor dentro
     form.addEventListener('submit', event =>{ //form é o event aqui
         event.preventDefault();
         controller.adiciona();
