@@ -1,5 +1,5 @@
-import { Negociacao } from "../models/negociacao.js";
-import { Negociacoes } from "../models/negociacoes.js";
+import { Negociacao } from "../src/models/negociacao.js";
+import { Negociacoes } from "../src/models/negociacoes.js";
 import { MensagemView } from "../views/mensagem-view.js";
 import { NegociacoesView } from "../views/negociacoes-view.js";
 import { DiaDaSemana } from "../enums/dias-da-semana.js";
