@@ -1,11 +1,11 @@
 {
     "compilerOptions": {
-        "outDir": "app/dist/js" ,
+        "outDir": "dist/js" ,
         "target": "ES6",
         "noEmitOnError": true,
         "noImplicitAny": true,
         "removeComments": true,
         "strictNullChecks": true
     },
-    "include":["app/**/*", "exercise"]
+    "include":["app/**/*", "exercise", "dist"]
 }
