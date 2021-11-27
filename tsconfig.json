@@ -7,5 +7,5 @@
         "removeComments": true,
         "strictNullChecks": true
     },
-    "include":["app/**/*", "exercise", "dist"]
+    "include":["app/**/*", "exercise", "dist", "src"]
 }

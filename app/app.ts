@@ -1,5 +1,5 @@
-import { NegociacaoController } from "./src/controllers/negociacao-controller.js";
-import { NegociacoesView } from "./src/views/negociacoes-view.js";
+import { NegociacaoController } from "../src/controllers/negociacao-controller.js.js";
+import { NegociacoesView } from "../src/views/negociacoes-view.js.js";
 
 const controller = new NegociacaoController();
 //quando submete apertando no botao, quer chamar o metodo adiciona da controller
